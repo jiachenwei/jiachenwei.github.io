@@ -3,22 +3,45 @@ layout: default
 title: homepage
 ---
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 自定义页面标题 -->
+    <title>{{ page.title }} - {{ site.title }}</title>
+
+    <!-- 使用 GitHub 图标作为 favicon -->
+    <link rel="icon" href="{{ site.favicon }}" type="image/svg+xml">
+</head>
+
+<!-- 动态加载文字的 Banner -->
 <header style="position: relative; text-align: center;">
+    <!-- 从 _config.yml 中加载图片 -->
+    <!-- <img src="{{ site.banner }}" alt="Site Banner" style="width: 100%; height: auto;"> -->
+
+    <!-- 从 _config.yml 中加载文字 -->
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white;">
         <h1>{{ site.banner_text.heading }}</h1>
         <p>{{ site.banner_text.subheading }}</p>
     </div>
 </header>
 
-<h1>Intro</h1>
-<p>{{ site.description }}</p>
+<body>
+    <h1>Intro</h1>
+    <p>{{ site.description }}</p>
 
-<h1>Latest Posts</h1>
-<ul>
-    {% for post in site.posts %}
-        <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <small>{{ post.date | date: "%B %d, %Y" }}</small>
-        </li>
-    {% endfor %}
-</ul>
+    <h1>Latest Posts</h2>
+        <ul>
+            {% for post in site.posts %}
+            <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                <small>{{ post.date | date: "%B %d, %Y" }}</small>
+            </li>
+            {% endfor %}
+        </ul>
+
+</body>
+
+</html>
