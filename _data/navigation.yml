@@ -2,9 +2,9 @@
 main:
   - title: "Research"
     url: /
-  - title: "Works"
+  - title: "Projects"
     url: /
   - title: "Posts"
     url: /
-  - title: "About me"
+  - title: "About"
     url: /
