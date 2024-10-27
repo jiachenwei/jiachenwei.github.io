@@ -11,3 +11,5 @@ favicon: "https://github.githubassets.com/favicons/favicon.svg"
 banner_text:
   heading: "欢迎来到 JiaChenwei's Blog"
   subheading: "这里是一个关于技术与思考的空间"
+
+show_downloads: false
