@@ -1,0 +1,9 @@
+items:
+  - name: "人工智能"
+    url: "https://example.com/ai"
+  - name: "机器学习"
+    url: "https://example.com/ml"
+  - name: "深度学习"
+    url: "https://example.com/dl"
+  - name: "自然语言处理"
+    url: "https://example.com/nlp"

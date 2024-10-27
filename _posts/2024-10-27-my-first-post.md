@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: single
 title: "My First Blog Post"
 date: 2024-10-27 12:00:00 +0000
 categories: blog
 tags: [Jekyll, blog, tutorial]
-permalink: /my-first-blog-post/
+permalink: /:categories/:year/:month/:day/:title.html
 ---
 
 这里是我的第一篇博客文章内容。这是使用 Jekyll 创建的。

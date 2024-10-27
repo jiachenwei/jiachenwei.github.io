@@ -1,9 +1,38 @@
-theme: jekyll-theme-cayman
+# Site settings
+title: "Jia Chenwei's Blog"
+description: "A blog about AI and technology."
+url: "https://jiachenwei.github.io"
+baseurl: ""
+future: true
 
-title: Jia Chenwei's Blog
-description: Bookmark this to keep an eye on my project updates!
+# Build settings
+# remote_theme: "mmistakes/minimal-mistakes"
+plugins:
+  # - jekyll-remote-theme
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
-# favicon: "https://github.githubassets.com/favicons/favicon.svg"
-favicon: "https://github.githubassets.com/favicons/favicon-dark.svg"
+# Minimal Mistakes settings
+author:
+  name: "Jia Chenwei"
+  avatar: "https://avatars.githubusercontent.com/u/34532116"
+  bio: "A blog about AI and technology."
+  location: "China"
+  email: "cwjia98@gmail.com"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/jiachenwei"
 
-show_downloads: false
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# SEO and Sitemap
+sitemap:
+  exclude:
+    - "/assets/"
+
+atom_feed:
+  hide: true

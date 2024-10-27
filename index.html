@@ -1,18 +1,16 @@
 ---
-layout: default
-title: Jia Chenwei
-description: 
+layout: home
+author_profile: true
 ---
 
-<h1>Intro</h1>
-<p>{{ site.description }}</p>
+<h1 class="archive__subtitle">Intro</h1>
+<p class="page__content">{{ site.description }}</p>
 
-<h1>Latest Posts</h1>
+<h1 class="archive__subtitle">Repos</h1>
 <ul>
-    {% for post in site.posts %}
-    <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <small>{{ post.date | date: "%B %d, %Y" }}</small>
-    </li>
+    {% for item in site.data.repo.items %}
+        <li>
+            <a href="{{ item.url }}">{{ item.name }}</a>
+        </li>
     {% endfor %}
 </ul>
