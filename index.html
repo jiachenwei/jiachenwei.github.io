@@ -19,9 +19,9 @@ description:
 
 <h1>github</h1>
 <ul>
-    {% for repository in site.github.public_repositories %}
+    {% for meta in site.github %}
         <li>
-            <a href="{{ repository.html_url }}">{{ repository.name }}</a>
+            <p>{{ meta }}</p>
         </li>
     {% endfor %}
 </ul>
