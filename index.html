@@ -10,13 +10,14 @@ description:
 <h1>Latest Posts</h1>
 <ul>
     {% for post in site.posts %}
-        <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <small>{{ post.date | date: "%B %d, %Y" }}</small>
-        </li>
+    <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <small>{{ post.date | date: "%B %d, %Y" }}</small>
+    </li>
     {% endfor %}
 </ul>
 
+<h1>github</h1>
 <ul>
     {% for repository in site.github.public_repositories %}
         <li>
