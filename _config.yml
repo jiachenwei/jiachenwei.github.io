@@ -1,3 +1,13 @@
 theme: jekyll-theme-cayman
 title: JiaChenwei's Blog
 description: Bookmark this to keep an eye on my project updates!
+
+favicon: "https://github.githubassets.com/favicons/favicon.svg"
+
+# Banner 图片路径
+# banner: "/assets/images/banner.jpg"
+
+# Banner 文字配置
+banner_text:
+  heading: "欢迎来到 JiaChenwei's Blog"
+  subheading: "这里是一个关于技术与思考的空间"
