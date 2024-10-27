@@ -17,6 +17,10 @@ description:
     {% endfor %}
 </ul>
 
-{% for repository in site.github.public_repositories %}
-  * [{{ repository.name }}]({{ repository.html_url }})
-{% endfor %}
+<ul>
+    {% for repository in site.github.public_repositories %}
+        <li>
+            <a>{{ repository.name repository.html_url }}</a>
+        </li>
+    {% endfor %}
+</ul>
