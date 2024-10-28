@@ -4,12 +4,33 @@ layout: archive
 
 {{ content }}
 
-<h1 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h1>
+<h1 class="archive__subtitle">👋 Introduce</h1>
+<div class="markdown-content">
+  {{ site.data.my_info.intro | markdownify }}
+</div>
+
+<h1 class="archive__subtitle">📚 Research Interests</h1>
+<ul style="display: flex; flex-wrap: wrap; gap: 16px; list-style-type: none; padding: 0;">
+  {% assign colors = "#FFADAD,#FFD6A5,#FDFFB6,#CAFFBF,#9BF6FF,#A0C4FF,#BDB2FF,#FFC6FF,#FFFFFC" | split: "," %}
+  {% assign color_count = colors | size %}
+  {% for item in site.data.my_info.ri %}
+  {% assign color_index = forloop.index0 | modulo: color_count %}
+  <li
+    style="display: inline-flex; padding: 8px 16px; background-color: {{ colors[color_index] }}; border-radius: 8px; text-align: center; justify-content: center; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    {{ item }}
+  </li>
+  {% endfor %}
+</ul>
+
+<h1 class="archive__subtitle">🚀 Github Activities</h1>
+<img src="https://ghchart.rshah.org/jiachenwei" alt="jiachenwei's Github chart" />
+
+<h1 class="archive__subtitle">📝 {{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h1>
 
 {% if paginator %}
-  {% assign posts = paginator.posts %}
+{% assign posts = paginator.posts %}
 {% else %}
-  {% assign posts = site.posts %}
+{% assign posts = site.posts %}
 {% endif %}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}

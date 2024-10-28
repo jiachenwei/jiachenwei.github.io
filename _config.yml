@@ -5,6 +5,9 @@ url: "https://jiachenwei.github.io"
 baseurl: ""
 future: true
 
+include:
+  - _pages
+
 # Build settings
 # Plugins (previously gems:)
 plugins:

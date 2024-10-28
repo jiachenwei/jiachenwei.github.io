@@ -2,25 +2,3 @@
 layout: home
 author_profile: true
 ---
-
-<h1 class="archive__subtitle">Introduce</h1>
-<!-- <p class="markdown-content">{{ site.data.my_info.intro }}</p> -->
-<div class="markdown-content">
-    {{ site.data.my_info.intro | markdownify }}
-</div>
-
-<h1 class="archive__subtitle">Research Interests</h1>
-<ul style="display: flex; flex-wrap: wrap; gap: 16px; list-style-type: none; padding: 0;">
-    {% assign colors = "#FFADAD,#FFD6A5,#FDFFB6,#CAFFBF,#9BF6FF,#A0C4FF,#BDB2FF,#FFC6FF,#FFFFFC" | split: "," %}
-    {% for item in site.data.my_info.ri %}
-        {% assign random_color = colors | sample %}
-        <li style="display: inline-flex; padding: 8px 16px; background-color: {{ random_color }}; border-radius: 8px; text-align: center; justify-content: center; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-            {{ item }}
-        </li>
-    {% endfor %}
-</ul>
-
-
-
-<h1 class="archive__subtitle">Code Contributions</h1>
-<img src="https://ghchart.rshah.org/jiachenwei" alt="jiachenwei's Github chart" />
