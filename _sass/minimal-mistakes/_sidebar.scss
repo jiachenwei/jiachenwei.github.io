@@ -118,6 +118,84 @@
 }
 
 /*
+   Category Sidebar
+   ========================================================================== */
+
+   .category-sidebar {
+    padding: 1em; /* 减少内边距 */
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* 减小阴影 */
+    border: 1px solid #e0e0e0;
+    margin-top: 1.5em; /* 减小顶部外边距 */
+  }
+  
+  .category-sidebar h2 {
+    font-size: 1.3em; /* 减小字体大小 */
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    border-bottom: 1px solid #4a90e2; /* 边框颜色 */
+    padding-bottom: 0.3em;
+    margin-bottom: 1em; /* 减少底部留白 */
+  }
+  
+  .sidebar-section {
+    margin-bottom: 1em; /* 减小各部分之间的间距 */
+  }
+  
+  .sidebar-section h3 {
+    font-size: 1em; /* 调整标题字体大小 */
+    color: #4a90e2;
+    border-left: 3px solid #4a90e2;
+    padding-left: 6px;
+    margin-bottom: 0.5em; /* 减小底部间距 */
+  }
+  
+  .sidebar-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-section li {
+    margin: 0.3em 0; /* 减小列表项之间的间距 */
+    padding: 0.2em 0.4em; /* 减小列表项的内边距 */
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .sidebar-section li:hover {
+    background-color: #f0f7ff;
+    transform: translateX(3px); /* 减小右移效果 */
+  }
+  
+  .sidebar-section a {
+    font-size: 0.9em; /* 链接字体大小稍小 */
+    color: #4a90e2;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .sidebar-section a:hover {
+    color: #0056a6;
+    text-decoration: underline;
+  }
+  
+  .category-sidebar a.item {
+    display: flex;
+    justify-content: space-between; /* 左右对齐 */
+    text-decoration: none; /* 去掉下划线 */
+    width: 100%; /* 链接占满容器宽度 */
+    font-weight: bold;
+    color: #007acc; /* 高亮颜色 */
+    border-left: 4px solid #007acc; /* 左侧边框高亮 */
+    padding-left: 8px; /* 缩进让出边框空间 */
+  }
+/*
    Author profile and links
    ========================================================================== */
 
