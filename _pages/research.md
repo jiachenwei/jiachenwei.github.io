@@ -11,3 +11,5 @@ permalink: /research/
 $$
 \alpha \times \beta
 $$
+
+This is a $$\text{inline}$$ latex math.

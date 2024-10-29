@@ -429,3 +429,39 @@
 		display: inline-block;
 	}
 }
+
+/*
+   Highlight Box
+   ========================================================================== */
+
+/* 优化后的高亮块样式 */
+.highlight-box {
+  background: linear-gradient(135deg, #fff3cd, #ffe8b3); /* 更柔和的渐变背景 */
+  border-left: 6px solid #ffa726; /* 左侧边框，橙色突出显示 */
+  padding: 0em 1em;
+  margin: 1em 1em;
+  font-size: 0.75em;
+  color: #856404; /* 深棕色字体 */
+  border-radius: 8px; /* 圆角 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 增强阴影效果 */
+  display: flex;
+  align-items: center;
+  max-width: 800px; /* 控制宽度 */
+  margin-left: auto; /* 居中对齐 */
+  margin-right: auto;
+}
+
+/* 强调的文字样式 */
+.highlight-box .type {
+  color: #ef6c00; /* 深橙色 */
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+/* 信息图标样式 */
+.highlight-box .icon {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+  color: #ffca28; /* 明黄色图标 */
+}
+

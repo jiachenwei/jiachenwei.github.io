@@ -2,6 +2,15 @@
 layout: archive
 ---
 
+<!-- 高亮块 -->
+<div class="highlight-box">
+  <span class="icon">{{ site.data.highlight_msg.icon }}</span>
+  <span class="type">{{ site.data.highlight_msg.type }}</span>
+  <div class="markdown-content tex2jax_process">
+    {{ site.data.highlight_msg.msg | markdownify }}
+  </div>
+</div>
+
 {{ content }}
 
 <h1 class="archive__subtitle">👋 Introduce</h1>
