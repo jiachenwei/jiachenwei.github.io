@@ -6,7 +6,14 @@
 
 {% if page.posts_sidebar or layout.posts_sidebar %}
 <div class="sidebar sticky category-sidebar">
-  <h2 class="archive__subtitle">📅Time Machine</h2>
+
+  <div class="sidebar-buttons">
+    <a href="/posts" class="sidebar-button">📅 Year</a>
+    <a href="/posts-in-tag" class="sidebar-button">🏷️ Tags</a>
+    <a href="/posts-in-category" class="sidebar-button">📂 Categories</a>
+  </div>
+
+  <h3 class="archive__subtitle">📅Time Machine</h3>
 
   <!-- 日期归档 -->
   <section class="sidebar-section">
@@ -25,3 +32,60 @@
   </section>
 </div>
 {% endif %}
+
+{% if page.tags_sidebar or layout.tags_sidebar %}
+<div class="sidebar sticky category-sidebar">
+
+  <div class="sidebar-buttons">
+    <a href="/posts" class="sidebar-button">📅 Year</a>
+    <a href="/posts-in-tag" class="sidebar-button">🏷️ Tags</a>
+    <a href="/posts-in-category" class="sidebar-button">📂 Categories</a>
+  </div>
+  
+  <h3 class="archive__subtitle">🏷️ Tags</h3>
+
+  <!-- 标签归档 -->
+  <section class="sidebar-section">
+    <ul>
+      {% assign all_tags = site.tags | sort %}
+      {% for tag in all_tags %}
+      <li>
+        <a href="#{{ tag[0] | slugify }}" class="item">
+          <span class="name">{{ tag[0] }}</span>
+          <span class="size">({{ tag[1].size }})</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+{% endif %}
+
+{% if page.categories_sidebar or layout.categories_sidebar %}
+<div class="sidebar sticky category-sidebar">
+
+  <div class="sidebar-buttons">
+    <a href="/posts" class="sidebar-button">📅 Year</a>
+    <a href="/posts-in-tag" class="sidebar-button">🏷️ Tags</a>
+    <a href="/posts-in-category" class="sidebar-button">📂 Categories</a>
+  </div>
+  
+  <h3 class="archive__subtitle">📂 Categories</h3>
+
+  <!-- 分类归档 -->
+  <section class="sidebar-section">
+    <ul>
+      {% assign all_categories = site.categories | sort %}
+      {% for category in all_categories %}
+      <li>
+        <a href="#{{ category[0] | slugify }}" class="item">
+          <span class="name">{{ category[0] }}</span>
+          <span class="size">({{ category[1].size }})</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+{% endif %}
+

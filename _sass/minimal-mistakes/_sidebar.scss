@@ -122,7 +122,7 @@
    ========================================================================== */
 
    .category-sidebar {
-    padding: 1em; /* 减少内边距 */
+    padding: 0.5em; /* 减少内边距 */
     background-color: #fdfdfd;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* 减小阴影 */
@@ -195,6 +195,41 @@
     border-left: 4px solid #007acc; /* 左侧边框高亮 */
     padding-left: 8px; /* 缩进让出边框空间 */
   }
+
+/* 纵向排列按钮容器样式 */
+.sidebar-buttons {
+  display: flex;
+  flex-direction: column; /* 纵向排列 */
+  gap: 0.3em; /* 减小按钮之间的间距 */
+  margin-bottom: 0.5em;
+  padding: 0.2em;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+}
+
+/* 按钮样式 */
+.sidebar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3em 0.6em; /* 减少填充以紧凑显示 */
+  font-size: 0.7em; /* 略小的字体，保持可读性 */
+  background-color: #e0f2f1; /* 浅绿色背景 */
+  color: #00695c; /* 深绿色字体 */
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #b2dfdb; /* 边框颜色稍浅 */
+  transition: background-color 0.3s ease;
+  font-weight: 500; /* 半粗字体 */
+}
+
+/* 悬停效果 */
+.sidebar-button:hover {
+  background-color: #b2ebf2; /* 悬停时的稍深背景色 */
+  border-color: #80cbc4; /* 边框颜色稍深 */
+  color: #004d40;
+}
+
 /*
    Author profile and links
    ========================================================================== */

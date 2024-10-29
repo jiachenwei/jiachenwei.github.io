@@ -3,7 +3,7 @@ layout: single
 title: "My Secon Blog Post"
 date: 2023-10-27 12:00:00 +0000
 categories: blog
-tags: [Jekyll, blog, tutorial]
+tags: [Jekyll, blog, tutorial, test]
 permalink: /:categories/:year/:month/:day/:title.html
 ---
 

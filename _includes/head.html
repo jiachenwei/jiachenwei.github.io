@@ -32,4 +32,23 @@
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <link rel="shortcut icon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon-dark.svg">
 
+<!-- MathJax 配置 -->
+<script type="text/x-mathjax-config">
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+      ignoreHtmlClass: "tex2jax_ignore"
+    }
+  };
+</script>
+
+<!-- 引入 MathJax -->
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 <!-- end custom head snippets -->
