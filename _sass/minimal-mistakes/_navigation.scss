@@ -451,78 +451,78 @@ border-top: 1px solid $border-color;
 
 .toc {
   font-family: $sans-serif-narrow;
-  font-size: 0.75rem;
-  color: #333;
-  background-color: #f7fafc;
-  border: 1px solid #d9e2ec;
-  border-radius: 4px;
-  padding: 0.5rem;
-  max-width: 240px;
-  margin: 1rem auto;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
+  font-size: 0.75em; /* 更小字体 */
+  color: #333; /* 简化颜色代码 */
+  background-color: #f7fafc; /* 浅色背景 */
+  border: 1px solid #d9e2ec; /* 浅灰色边框 */
+  border-radius: 4px; /* 更小的圆角 */
+  padding: 0.5rem; /* 缩小内边距 */
+  max-width: 240px; /* 更小的宽度 */
+  margin: 1em auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* 减轻阴影 */
 
-.toc .nav__title {
-  display: flex;
-  align-items: center;
-  color: #007acc;
-  font-size: 0.85rem;
-  font-weight: 600;
-  background: #e2f0fa;
-  padding: 0.5rem;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
-}
+  .nav__title {
+    display: flex;
+    align-items: center;
+    color: #007acc;
+    font-size: 0.85em; /* 更小字体 */
+    font-weight: 600;
+    background: #e2f0fa;
+    padding: 0.5rem; /* 缩小标题栏内边距 */
+    border-radius: 4px;
+    margin-bottom: 0.5rem; /* 缩小间距 */
+  }
 
-.toc .nav__title .icon {
-  margin-right: 0.3rem;
-  font-size: 0.9rem;
-}
+  .nav__title .icon {
+    margin-right: 0.3rem;
+    font-size: 0.9em; /* 更小的图标 */
+  }
 
-.toc .active a {
-  color: #007acc;
-  font-weight: bold;
-  background-color: #e6f3ff; /* 避免滚动时突变 */
-  padding: 0.35rem 0.6rem;
-  border-left: 3px solid #007acc;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
+  .active a {
+    color: #007acc;
+    font-weight: bold;
+    background-color: #e6f3ff;
+    padding: 0.35rem 0.6rem;
+    border-left: 3px solid #007acc; /* 左侧的蓝色条 */
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
-
 
 .toc__menu {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 0.8rem;
-}
+  font-size: 0.8em; /* 更小字体 */
 
-.toc__menu a {
-  padding: 0.35rem 0.6rem !important;
-}
+  a {
+    display: block;
+    padding: 0.35rem 0.6rem; /* 缩小内边距 */
+    color: #555;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s, padding-left 0.2s;
 
-.toc__menu a.active {
-  padding: 0.35rem 0.6rem !important;
-}
+    &:hover {
+      color: #005ea6;
+      background-color: #f0f8ff;
+      padding-left: 0.9rem; /* 悬停时轻微缩进 */
+    }
+  }
 
-.toc__menu a:hover {
-  color: #005ea6;
-  background-color: #f0f8ff;
-  padding-left: 0.75rem;
-}
+  /* 子菜单样式 */
+  li ul > li a {
+    padding-left: 1rem;
+    font-size: 0.78em;
+    color: #666;
+  }
 
-/* 统一子菜单的缩进样式，避免层级不一致 */
-.toc__menu li ul > li a {
-  padding-left: 1rem;
-  font-size: 0.78rem;
-  color: #666;
-}
+  li ul li ul > li a {
+    padding-left: 1.5rem;
+  }
 
-.toc__menu li ul li ul > li a {
-  padding-left: 1.5rem;
-}
-
-.toc__menu li ul li ul li ul > li a {
-  padding-left: 2rem;
+  li ul li ul li ul > li a {
+    padding-left: 2rem;
+  }
 }
