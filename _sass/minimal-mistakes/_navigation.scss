@@ -454,71 +454,71 @@
      ========================================================================== */
 
 .toc {
-  font-family: $sans-serif-narrow;
-  font-size: 0.75rem;
-  color: #333;
-  background-color: #f7fafc;
-  border: 1px solid #d9e2ec;
-  border-radius: 4px;
-  padding: 0.5rem;
-  max-width: 240px;
-  margin: 1rem auto;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.8rem;
+  color: #2c3e50;
+  background-color: #f8f9fa;
+  border: 1px solid #d6d8db;
+  border-radius: 6px;
+  padding: 0.75rem;
+  max-width: 260px;
+  margin: 1.5rem auto;
 }
 
 .toc .nav__title {
   display: flex;
   align-items: center;
-  color: #007acc;
-  font-size: 0.85rem;
-  font-weight: 600;
-  background: #e2f0fa;
-  padding: 0.5rem;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
+  color: #0056b3;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: #e9f1fa;
+  padding: 0.6rem;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
 }
 
 .toc .nav__title .icon {
-  margin-right: 0.3rem;
-  font-size: 0.9rem;
+  margin-right: 0.4rem;
+  font-size: 1rem;
 }
 
 .toc .active a {
-  background-color: #e6f3ff !important;
-  padding: 0.35rem 0.6rem;
-  border-left: 3px solid #007acc;
-  border-radius: 4px;
+  color: #0056b3;
+  font-weight: bold;
+  background-color: #e3ecf7;
+  padding: 0.4rem 0.65rem;
+  border-left: 4px solid #0056b3;
+  border-radius: 6px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .toc__menu {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
 }
 
 .toc__menu a {
   display: block;
-  padding: 0.35rem 0.6rem;
-  color: #555;
+  padding: 0.4rem 0.65rem;
+  color: #444;
   text-decoration: none;
-  border-radius: 4px;
-  transition: background 0.2s, padding-left 0.2s;
+  border-radius: 6px;
 }
 
 .toc__menu a:hover {
-  color: #005ea6;
-  background-color: #f0f8ff;
-  padding-left: 0.75rem;
+  color: #004080;
+  background-color: #ebf4ff;
 }
 
-/* 统一子菜单的缩进样式，避免层级不一致 */
+/* 统一子菜单缩进，使层级更加清晰 */
 .toc__menu li ul > li a {
   padding-left: 1rem;
   font-size: 0.78rem;
-  color: #666;
+  color: #555;
 }
 
 .toc__menu li ul li ul > li a {
