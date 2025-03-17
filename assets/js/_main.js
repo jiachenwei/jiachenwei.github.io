@@ -41,52 +41,53 @@ $(document).ready(function () {
   });
 
   // Gumshoe scroll spy init
-  if (document.querySelector("nav.toc")) {
-    var spy = new Gumshoe("nav.toc a", {
-      // Active classes
-      navClass: "active", // applied to the nav list item
-      contentClass: "active", // applied to the content
+if (document.querySelector("nav.toc")) {
+  var spy = new Gumshoe("nav.toc a", {
+    // Active classes
+    navClass: "active", // applied to the nav list item
+    contentClass: "active", // applied to the content
 
-      // Nested navigation
-      nested: false, // don't add active class to parent items
-      nestedClass: "active",
+    // Nested navigation
+    nested: false, // don't add active class to parent items
+    nestedClass: "active",
 
-      // Offset & reflow
-      offset: 50, // 适当增加 offset，避免过早激活
-      reflow: true, // 监听 reflow 以支持动态内容调整
+    // Offset & reflow
+    offset: 50, // 适当增加 offset，避免过早激活
+    reflow: true, // 监听 reflow 以支持动态内容调整
 
-      // Event support
-      events: true,
-    });
-  }
-
-  // 自动滚动 ToC 以匹配当前激活的内容
-  const scrollTocToContent = function (event) {
-    var target = event.target;
-    var tocElement = document.querySelector("aside.sidebar__right.sticky");
-    if (!tocElement) return;
-
-    // 仅在 ToC 为 sticky 状态时执行
-    if (window.getComputedStyle(tocElement).position !== "sticky") return;
-
-    // 计算元素相对于视口的偏移
-    var targetRect = target.getBoundingClientRect();
-    var viewportHeight = window.innerHeight;
-
-    // 仅当目标项超出视口时才滚动
-    if (targetRect.top < 10 || targetRect.bottom > viewportHeight - 10) {
-      target.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    }
-  };
-
-  // 监听 ToC 内部链接点击，确保滚动后保持可见
-  document.querySelectorAll(".toc__menu a").forEach((link) => {
-    link.addEventListener("click", (event) => {
-      setTimeout(() => {
-        scrollTocToContent(event);
-      }, 100); // 延迟确保滚动完成后调整
-    });
+    // Event support
+    events: true,
   });
+}
+
+// 自动滚动 ToC 以匹配当前激活的内容
+const scrollTocToContent = function (event) {
+  var target = event.target;
+  var tocElement = document.querySelector("aside.sidebar__right.sticky");
+  if (!tocElement) return;
+
+  // 仅在 ToC 为 sticky 状态时执行
+  if (window.getComputedStyle(tocElement).position !== "sticky") return;
+
+  // 计算元素相对于视口的偏移
+  var targetRect = target.getBoundingClientRect();
+  var viewportHeight = window.innerHeight;
+
+  // 仅当目标项超出视口时才滚动
+  if (targetRect.top < 10 || targetRect.bottom > viewportHeight - 10) {
+    target.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+};
+
+// 监听 ToC 内部链接点击，确保滚动后保持可见
+document.querySelectorAll(".toc__menu a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    setTimeout(() => {
+      scrollTocToContent(event);
+    }, 100); // 延迟确保滚动完成后调整
+  });
+});
+
 
   // Has issues on Firefox, whitelist Chrome for now
   if (!!window.chrome) {
@@ -96,9 +97,7 @@ $(document).ready(function () {
   // add lightbox class to all image links
   $(
     "a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif'],a[href$='.webp']"
-  )
-    .has("> img")
-    .addClass("image-popup");
+  ).has("> img").addClass("image-popup");
 
   // Magnific-Popup options
   $(".image-popup").magnificPopup({
@@ -216,9 +215,9 @@ $(document).ready(function () {
       if (thisButton.interval !== null) {
         clearInterval(thisButton.interval);
       }
-      thisButton.classList.add("copied");
+      thisButton.classList.add('copied');
       thisButton.interval = setTimeout(function () {
-        thisButton.classList.remove("copied");
+        thisButton.classList.remove('copied');
         clearInterval(thisButton.interval);
         thisButton.interval = null;
       }, 1500);
@@ -239,8 +238,7 @@ $(document).ready(function () {
         var copyButton = document.createElement("button");
         copyButton.title = "Copy to clipboard";
         copyButton.className = "clipboard-copy-button";
-        copyButton.innerHTML =
-          '<span class="sr-only">Copy code</span><i class="far fa-fw fa-copy"></i><i class="fas fa-fw fa-check copied"></i>';
+        copyButton.innerHTML = '<span class="sr-only">Copy code</span><i class="far fa-fw fa-copy"></i><i class="fas fa-fw fa-check copied"></i>';
         copyButton.addEventListener("click", copyButtonEventListener);
         container.prepend(copyButton);
       });
