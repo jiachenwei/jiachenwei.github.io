@@ -484,15 +484,12 @@
 }
 
 .toc .active a {
-  color: #007acc;
-  font-weight: bold;
-  background-color: #e6f3ff;
+  background-color: #e6f3ff !important;
   padding: 0.35rem 0.6rem;
   border-left: 3px solid #007acc;
   border-radius: 4px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .toc__menu {
